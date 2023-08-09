@@ -1,18 +1,9 @@
 
 <script setup>
-import PageContainer from './pagecontainer.vue'
+console.log('button')
+
 </script>
 
 <template>
-  <PageContainer class="heroSection">
-    <p class="text-lg text-gray-800 ">Welcome to the page</p>
-    
-  </PageContainer>
-  
+  <button class="button px-2 py-1 bg-brand-1 text-white text-lg w-auto">Click me</button>
 </template>
-<style scoped>
-.heroSection{
-  min-height: 500px;
-}
-
-</style>

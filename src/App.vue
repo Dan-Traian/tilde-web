@@ -1,21 +1,24 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
+import NavItem from './components/core/NavItem.vue';
+import FooterSection from './components/layout/sections/FooterSection.vue';
 </script>
 
 <template>
   <header class="sticky top-0 left-0 w-screen ">
     <nav class="w-full flex gap-4 py-3 items-center justify-center px-6">
       <img alt="Vue logo" class="logo mr-auto" src="@/assets/logo.svg" width="32" height="32" />
-      <RouterLink class="nav text-gray-600 hover:text-gray-700" to="/">Home</RouterLink>
-      <RouterLink class="nav text-gray-600 hover:text-gray-700" to="/specialisation">Specialisation</RouterLink>
-      <RouterLink class="nav text-gray-600 hover:text-gray-700" to="/about">About me</RouterLink>
-      <RouterLink class="nav text-gray-600 hover:text-gray-700" to="/contact">Contact</RouterLink>
-      
+      <NavItem toPage="/" label="Home" />
+      <NavItem toPage="/specialisation" label="Specialisation" />
+      <NavItem toPage="/about" label="About me" />
+      <NavItem toPage="/contact" label="Contact" />
+
     </nav>
   </header>
   <main>
     <RouterView>
-  </RouterView>
+    </RouterView>
+    <FooterSection/>
   </main>
 </template>
 
@@ -24,15 +27,16 @@ header {
   position: sticky;
   width: 100vw;
 
-  nav {
-    gap: 20px;
-  }
+}
+
+nav {
+  gap: 20px;
 }
 
 main {
   width: 100vw;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
+  gap: 150px;
 }
 </style>

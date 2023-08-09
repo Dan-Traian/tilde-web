@@ -1,5 +1,10 @@
 @import './base.css';
 
+* {
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
 #app {
   margin: 0;
   font-weight: normal;

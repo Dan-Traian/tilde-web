@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="content mx-auto border p-3">
+  <div class="content mx-auto">
     <slot></slot>
   </div>
 </template>
@@ -12,6 +12,5 @@
 .content{
   max-width: 1200px;
   width: 100%;
-  background-color: aliceblue;
 }
 </style>
