@@ -3,87 +3,36 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
-
-    <nav class="w-full flex gap-1">
-      <img alt="Vue logo" class="logo mr-auto" src="@/assets/logo.svg" width="125" height="125" />
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/specialisation">Specialisation</RouterLink>
-      <RouterLink to="/about">About me</RouterLink>
-      <RouterLink to="/contact">Contact</RouterLink>
+  <header class="sticky top-0 left-0 w-screen ">
+    <nav class="w-full flex gap-4 py-3 items-center justify-center px-6">
+      <img alt="Vue logo" class="logo mr-auto" src="@/assets/logo.svg" width="32" height="32" />
+      <RouterLink class="nav text-gray-600 hover:text-gray-700" to="/">Home</RouterLink>
+      <RouterLink class="nav text-gray-600 hover:text-gray-700" to="/specialisation">Specialisation</RouterLink>
+      <RouterLink class="nav text-gray-600 hover:text-gray-700" to="/about">About me</RouterLink>
+      <RouterLink class="nav text-gray-600 hover:text-gray-700" to="/contact">Contact</RouterLink>
+      
     </nav>
-
   </header>
-
-  <div class="w-screen h-auto flex "></div>
-  <RouterView>
-
-    
-
-
+  <main>
+    <RouterView>
   </RouterView>
+  </main>
 </template>
 
-<style scoped>
+<style>
 header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+  position: sticky;
+  width: 100vw;
 
   nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+    gap: 20px;
   }
+}
+
+main {
+  width: 100vw;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 </style>
